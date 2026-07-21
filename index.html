@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, Baby💞!</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="adi.css">
+</head>
+<body>
+
+    <!-- PAGE 1: Front Page -->
+    <div id="page-1" class="page active">
+        <h1>Cheers to Your New Chapter</h1>
+        <p class="subtitle">Toasting to health, happiness, and success.</p>
+        <a href="#" class="btn-next pop-nervous" onclick="navigateTo(2)">click here</a>
+    </div>
+
+    <!-- PAGE 2: Envelope Notification -->
+    <div id="page-2" class="page">
+        <header>
+            <h1>Cheers to Your New Chapter</h1>
+            <p class="subtitle">Toasting to health, happiness, and success.</p>
+        </header>
+        <div class="envelope-container pop-nervous" onclick="navigateTo(3)">
+            <div class="notification-badge">1</div>
+        </div>
+        <p style="margin-top: 50px; font-weight: 300; "envelope-subtext">A special someone sent you something!</p>
+          <a href="#" class="btn-next" onclick="navigateTo(1)">back</a>
+          <script src="adi.js"></script>
+    </div>
+    </div>
+    </div>
+    
+    
+    <!-- PAGE 3: Confetti Exploded Pop-Up -->
+    <div id="page-3" class="page" style="background-color: #111111;">
+        <canvas id="confetti" class="confetti-canvas"></canvas>
+        <header style="margin-top: 100px;">
+            <h1>Happy Birthday, Adi
+                        <p class="subtitle">Toasting to health, happiness, and success.</p>
+        </header>
+        <button class="btn-next pop-nervous" onclick="navigateTo(4)" style="margin-top: 80x;">Click here to get started!</button>
+         <button class="btn-next" onclick="navigateTo(2)" style="margin-top: 100x;">back</button> 
+    </div>
+    </div>
+
+    <!-- PAGE 4: Main Selection Menu Hub -->
+    <div id="page-4" class="page">
+        <header>
+            <h1>Happy Birthday, Adi!</h1>
+            <p class="subtitle">Toasting to health, happiness, and success.</p>
+        </header>
+        <div class="menu-grid">
+            <div class="menu-card" onclick="navigateTo(5)">
+                <img src="https://i.pinimg.com/736x/2f/1e/2f/2f1e2f1a3e20c8a7d4dc46d600c94333.jpg" alt="Cat Icon 1">
+                <p>My love letter</p>
+            </div>
+            <div class="menu-card" onclick="navigateTo(6)">
+                <img src="https://i.pinimg.com/736x/31/ef/d5/31efd59bc976ea901cb4344a4c5f8a0a.jpg" alt="Cat Icon 2">
+                <p>A song for you</p>
+            </div>
+            <div class="menu-card" onclick="navigateTo(7)">
+                <img src="https://i.pinimg.com/736x/90/e0/01/90e001825cbc3dac493b451961f92580.jpg" alt="Cat Icon 3">
+                <p>Our pictures together</p>
+            </div>
+        </div>
+         <button class="btn-next" onclick="navigateTo(1)">back</button>
+    </div>
+    </div>
+
+    <!-- PAGE 5: Letter Box -->
+    <div id="page-5" class="page">
+        <header>
+            <h1>Happy Birthday, Adi!</h1>
+            <p class="subtitle">Toasting to health, happiness, and success.</p>
+        </header>
+        <div class="letter-content">
+            <p>Happy Birthday, Baby💞</p>
+            <p>Today is all about you and I’m happy because today is your special day and you get another beautiful years of your life. You deserve all the happiness, love, success, and many other beautiful things that this world can give you. Even if I’m miles away from you right now, know that my heart is with you on this special day of yours.</p>
+            <p>I know that life can be so tough sometimes, but I also believe that you are strong enough to overcome your challenges and go through all the storm just to see the rainbow. I will always be there for you no matter what, even if I’m miles away from you. I want you to know that I love you so much. You are such an incredible part of my life and I can’t imagine what will happen to me if I lost you because you are a huge part of my life. You bring me happiness every single day, and for that I’m so grateful for you.</p>
+            <p>Let us promise each other that no matter how misunderstood we are with each other, let us promise to fix everything.</p>
+            <p>Thank you for loving me, for making me feel appreciated, making me feel happy, and making me feel like you’ve completed me. Thank you for being patient with me, and I’m so grateful for you being there for me even I’m far away from you. You are such an amazing person, and you always brighten my day just by being there for me. You are such a blessing in my life.</p>
+            <p>As you start your 19 years of beautiful journey, I hope that you always believe in yourself, because I’ll always believe in you. You are such an amazing, beautiful, kind, loving and intelligent woman and no matter what happens I will always be there for you. Believe in yourself no matter what, because you are such a blessing not only for me but for other people as well.</p>
+            <p>Once again Happy Birthday My Beautiful Baby. May God bless you with health, happiness, peace, comfort, and may you achieve everything you've been dreaming of. May this year be full of surprises and happiness, and may you be able to fulfill all your dreams and goals. I love you always baby. Thank you for bringing me safety, happiness, and being my biggest blessing. Happy 19th Birthday Adi!.</p>
+            <p>Forever yours💞</p>
+        </div>
+        <div class="back-nav" onclick="navigateTo(4)">&larr; back</div>
+    </div>
+
+    <!-- PAGE 6: Song Media Player Component -->
+    <div id="page-6" class="page">
+        <header>
+            <h1>Happy Birthday, Adi!</h1>
+            <p class="subtitle">Toasting to health, happiness, and success.</p>
+        </header>
+        
+        <div class="player-container">
+            <span>🌺</span>
+            <div class="vinyl-record"></div>
+            
+            <!-- Paste your custom embedded music link right below -->
+            <!-- CORRECT (Embed Link) -->
+<iframe class="media-frame-box" src="https://open.spotify.com/embed/track/1dGr1c8CrMLDpV6mPbImSI" width="100%" height="152" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            
+            <span>🍹</span>
+        </div>
+
+        <h2 style="font-family: 'Alex Brush', cursive; font-size: 2.5rem; margin-top: 30px;">This song reminds me of you!</h2>
+        <div class="back-nav" onclick="navigateTo(4)">&larr; Back</div>
+    </div>
+
+    <!-- PAGE 7: Photo Gallery -->
+    <div id="page-7" class="page">
+        <header>
+            <h1>Happy Birthday, My love!</h1>
+            <p class="subtitle">Toasting to health, happiness, and success.</p>
+        </header>
+        <h2 style="font-family: 'Alex Brush', cursive; font-size: 2.5rem; margin-bottom: 10px;">Us in this life</h2>
+
+        <div class="gallery-grid">
+            <!-- Swap out these Unsplash URLs for your own images links -->
+            <div class="photo-slot"><img src="photo1.jpg" alt="Pic 1"></div>
+            <div class="photo-slot"><img src="photo2.jpg" alt="Pic 2"></div>
+            <div class="photo-slot"><img src="photo3.jpg" alt="Pic 3"></div>
+            <div class="photo-slot"><img src="photo4.jpg" alt="Pic 4"></div>
+            <div class="photo-slot"><img src="photo5.jpg" alt="Pic 5"></div>
+            <div class="photo-slot"><img src="photo6.jpg" alt="Pic 6"></div>
+        </div>
+        
+        <div class="back-nav" onclick="navigateTo(4)">&larr; Back</div>
+    </div>
+
+    <!-- Link to external JS file -->
+    <script src="script.js"></script>
+</body>
+</html>
