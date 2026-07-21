@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday, Baby💞!</title>
+    <title>Happy Birthday,Baby💞!</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +26,7 @@
             <h1>Cheers to Your New Chapter</h1>
             <p class="subtitle">Toasting to health, happiness, and success.</p>
         </header>
-        <div class="envelope-container pop-nervous" onclick="navigateTo(3)">
+        <div class="envelope-container pop pop-nervous" onclick="navigateTo(3)">
             <div class="notification-badge">1</div>
         </div>
         <p style="margin-top: 50px; font-weight: 300; "envelope-subtext">A special someone sent you something!</p>
@@ -44,8 +44,8 @@
             <h1>Happy Birthday, Adi
                         <p class="subtitle">Toasting to health, happiness, and success.</p>
         </header>
-        <button class="btn-next pop-nervous" onclick="navigateTo(4)" style="margin-top: 80x;">Click here to get started!</button>
-         <button class="btn-next" onclick="navigateTo(2)" style="margin-top: 100x;">back</button> 
+        <button class="btn-next" onclick="navigateTo(4)" style="margin-top: 80x;">Click here to get started!</button>
+         <button class="btn-next" onclick="navigateTo(2)">back</button> 
     </div>
     </div>
 
@@ -66,10 +66,10 @@
             </div>
             <div class="menu-card" onclick="navigateTo(7)">
                 <img src="https://i.pinimg.com/736x/90/e0/01/90e001825cbc3dac493b451961f92580.jpg" alt="Cat Icon 3">
-                <p>Our pictures together</p>
+                <p>Your pictures</p>
             </div>
         </div>
-         <button class="btn-next" onclick="navigateTo(1)">back</button>
+         <button class="btn-next" onclick="navigateTo()">back</button>
     </div>
     </div>
 
@@ -86,7 +86,7 @@
             <p>Let us promise each other that no matter how misunderstood we are with each other, let us promise to fix everything.</p>
             <p>Thank you for loving me, for making me feel appreciated, making me feel happy, and making me feel like you’ve completed me. Thank you for being patient with me, and I’m so grateful for you being there for me even I’m far away from you. You are such an amazing person, and you always brighten my day just by being there for me. You are such a blessing in my life.</p>
             <p>As you start your 19 years of beautiful journey, I hope that you always believe in yourself, because I’ll always believe in you. You are such an amazing, beautiful, kind, loving and intelligent woman and no matter what happens I will always be there for you. Believe in yourself no matter what, because you are such a blessing not only for me but for other people as well.</p>
-            <p>Once again Happy Birthday My Beautiful Baby. May God bless you with health, happiness, peace, comfort, and may you achieve everything you've been dreaming of. May this year be full of surprises and happiness, and may you be able to fulfill all your dreams and goals. I love you always baby. Thank you for bringing me safety, happiness, and being my biggest blessing. Happy 19th Birthday Adi!.</p>
+            <p>Once again Happy Birthday My Beautiful Adi. May God bless you with health, happiness, peace, comfort, and may you achieve everything you've been dreaming of. May this year be full of surprises and happiness, and may you be able to fulfill all your dreams and goals. I love you always baby. Thank you for bringing me safety, happiness, and being my biggest blessing. Happy 19th Birthday Adi!.</p>
             <p>Forever yours💞</p>
         </div>
         <div class="back-nav" onclick="navigateTo(4)">&larr; back</div>
@@ -120,7 +120,7 @@
             <h1>Happy Birthday, My love!</h1>
             <p class="subtitle">Toasting to health, happiness, and success.</p>
         </header>
-        <h2 style="font-family: 'Alex Brush', cursive; font-size: 2.5rem; margin-bottom: 10px;">Us in this life</h2>
+        <h2 style="font-family: 'Alex Brush', cursive; font-size: 2.5rem; margin-bottom: 10px;">I love you Pretty</h2>
 
         <div class="gallery-grid">
             <!-- Swap out these Unsplash URLs for your own images links -->
@@ -136,131 +136,6 @@
     </div>
 
     <!-- Link to external JS file -->
-    <script>
-    // Global tracking of the sub-menu layout configuration
-let isInsideSubItem = false;
-
-// Basic Multi-Page Navigation Handler
-function navigateTo(pageId) {
-    // Hide all pages
-    const pages = document.querySelectorAll('.page');
-    pages.forEach(page => {
-        page.classList.add('hidden');
-        page.classList.remove('active-page');
-    });
-
-    // Show destination page
-    const targetPage = document.getElementById(pageId);
-    targetPage.classList.remove('hidden');
-    targetPage.classList.add('active-page');
-
-    // Initialize or run specific page logic loops
-    if (pageId === 'page-confetti') {
-        startConfetti();
-    }
-}
-
-// Sub-page item details expansion configuration
-function openSubPage(contentId) {
-    isInsideSubItem = true;
-    
-    // Hide the primary navigation layout list selection grids
-    document.querySelector('.cards-grid').classList.add('hidden');
-    
-    // Display targeted panel details dynamically
-    document.getElementById(contentId).classList.remove('hidden');
-    
-    // Update the button text to a minimal layout style requested in Photo 5
-    const backBtn = document.getElementById('dynamic-back-btn');
-    backBtn.textContent = "Back";
-    backBtn.className = "nav-btn-simple-back";
-}
-
-// Context-aware Back Button Controller
-function handleBackAction() {
-    if (isInsideSubItem) {
-        // Exit single menu item view and return back to the 3-cards dashboard selection layout
-        isInsideSubItem = false;
-        
-        // Re-display the grid navigation options elements
-        document.querySelector('.cards-grid').classList.remove('hidden');
-        
-        // Hide individual container panels elements completely
-        const subContents = document.querySelectorAll('.sub-content');
-        subContents.forEach(content => content.classList.add('hidden'));
-        
-        // Reset button parameters to original structure requirements
-        const backBtn = document.getElementById('dynamic-back-btn');
-        backBtn.textContent = "add a black button here and once it click it will go back to the main page which is the sunsent";
-        backBtn.className = "nav-btn-black-long";
-    } else {
-        // Return clear back to the primary sunset initialization menu directly
-        navigateTo('page-main');
-    }
-}
-
-// Continuous Render Engine for Exploded Confetti (Photo 3 Guardrail Request)
-let confettiInterval;
-function startConfetti() {
-    const canvas = document.getElementById('confetti-canvas');
-    const ctx = canvas.getContext('2d');
-    
-    // Auto scale canvas size
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-
-    const colors = ['#ffbc42', '#ffffff', '#e19526', '#b5832a'];
-    const particleCount = 120;
-    const particles = [];
-
-    // Initialize particles array
-    for (let i = 0; i < particleCount; i++) {
-        particles.push({
-            x: Math.random() * canvas.width,
-            y: Math.random() * canvas.height - canvas.height,
-            size: Math.random() * 6 + 4,
-            speed: Math.random() * 3 + 2,
-            color: colors[Math.floor(Math.random() * colors.length)],
-            rotation: Math.random() * 360,
-            rotationSpeed: Math.random() * 4 - 2
-        });
-    }
-
-    clearInterval(confettiInterval);
-    
-    // Render Animation Loop Loop
-    confettiInterval = setInterval(() => {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-        particles.forEach(p => {
-            ctx.save();
-            ctx.fillStyle = p.color;
-            ctx.translate(p.x + p.size / 2, p.y + p.size / 2);
-            ctx.rotate((p.rotation * Math.PI) / 180);
-            ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size * (Math.random() * 0.4 + 0.8));
-            ctx.restore();
-
-            // Update particle physics properties for natural float drops
-            p.y += p.speed;
-            p.rotation += p.rotationSpeed;
-
-            // Simple reset to top of scene loop to make sure it keeps falling indefinitely
-            if (p.y > canvas.height) {
-                p.y = -20;
-                p.x = Math.random() * canvas.width;
-            }
-        });
-    }, 1000 / 60);
-}
-
-// Adjust sizes on resize profile layout configuration metrics parameters
-window.addEventListener('resize', () => {
-    const canvas = document.getElementById('confetti-canvas');
-    if (canvas && !canvas.classList.contains('hidden')) {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-    }
-});
-</script>
+    <script src="adi.js"></script>
 </body>
 </html>
